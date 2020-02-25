@@ -12,15 +12,29 @@ import {
     DropdownMenu,
     DropdownItem
   } from 'reactstrap';
+import styled from 'styled-components'
 
 import cartlogo from '../cart-logo.png'
 
 const NavBar = () => {
+    const Div = styled.div`
+        .drop-down{
+            background-color: snow;
+        }
+
+        .dropdown-item{   
+            :hover {
+                background-color: lavenderblush; 
+              }
+        }
+    `
+
     const [isOpen, setIsOpen] = useState(false)
     const toggle = () => setIsOpen(!isOpen)
 
     return (
-        <Navbar color="light" light expand="md">
+        <Div>
+        <Navbar style={{backgroundColor: 'snow'}} light expand="md">
             <NavbarBrand href="/">B.O.B.O.I</NavbarBrand>
             <NavbarToggler onClick={toggle} />
             <Collapse isOpen={isOpen} navbar>
@@ -32,7 +46,7 @@ const NavBar = () => {
                         <DropdownToggle nav caret>
                             S H O P
                         </DropdownToggle>
-                        <DropdownMenu right>
+                        <DropdownMenu className="drop-down" right>
                             <DropdownItem>
                                 All
                             </DropdownItem>
@@ -73,12 +87,13 @@ const NavBar = () => {
                     </NavItem>
                     <NavItem>
                         <NavLink href="/">
-                            <img src={cartlogo} width="20"/>
+                            <img src={cartlogo} alt="cart-logo" width="20"/>
                         </NavLink>
                     </NavItem>
                 </Nav>
             </Collapse>
         </Navbar>
+        </Div>
     )
 }
 

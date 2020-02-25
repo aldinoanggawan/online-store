@@ -1,8 +1,15 @@
 import React from 'react'
+import { Jumbotron, Container } from 'reactstrap'
+
+import Slideshow from '../components/Slideshow'
+
 
 const HomePage = () => {
     return (
-        <h1>This is the homepage!</h1>
+        <>
+        <Slideshow />
+           
+        </>
     )
 }
 
