@@ -8,23 +8,20 @@ import {
 } from 'reactstrap';
 import styled from 'styled-components'
 
-import cloth1 from '../assets/cloth1.jpg'
-import cloth2 from '../assets/cloth2.jpg'
-import cloth3 from '../assets/cloth3.jpg'
 
 const items = [
   {
-    src: `${cloth1}`,
+    src: 'assets/cloth1.jpg',
     altText: 'Slide 1',
     caption: 'Slide 1'
   },
   {
-    src: `${cloth2}`,
+    src: 'assets/cloth2.jpg',
     altText: 'Slide 2',
     caption: 'Slide 2'
   },
   {
-    src: `${cloth3}`,
+    src: 'assets/cloth3.jpg',
     altText: 'Slide 3',
     caption: 'Slide 3'
   }
