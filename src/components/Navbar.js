@@ -10,7 +10,7 @@ import {
     UncontrolledDropdown,
     DropdownToggle,
     DropdownMenu,
-    DropdownItem
+    DropdownItem,
   } from 'reactstrap';
 import styled from 'styled-components'
 
@@ -18,6 +18,11 @@ import cartlogo from '../cart-logo.png'
 
 const NavBar = () => {
     const Div = styled.div`
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 2;
+
         .drop-down{
             background-color: snow;
         }
@@ -28,13 +33,18 @@ const NavBar = () => {
               }
         }
     `
+    
+    const navStyle = {
+        backgroundColor: 'rgba(255,255,255,0.95)',
+        color: 'rgb(51,51,51)'
+    }
 
     const [isOpen, setIsOpen] = useState(false)
     const toggle = () => setIsOpen(!isOpen)
 
     return (
         <Div>
-        <Navbar style={{backgroundColor: 'snow'}} light expand="md">
+        <Navbar style={navStyle} light expand="md">
             <NavbarBrand href="/">B.O.B.O.I</NavbarBrand>
             <NavbarToggler onClick={toggle} />
             <Collapse isOpen={isOpen} navbar>

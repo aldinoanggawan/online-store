@@ -67,6 +67,7 @@ const Slideshow = (props) => {
   });
 
   return (
+    <>
     <Carousel
       activeIndex={activeIndex}
       next={next}
@@ -77,6 +78,7 @@ const Slideshow = (props) => {
       <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
       <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
     </Carousel>
+    </>
   );
 }
 
