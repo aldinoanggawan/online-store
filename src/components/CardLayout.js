@@ -9,24 +9,36 @@ import styled from 'styled-components'
 const CardLayout = (props) => {
     const Div = styled.div`
         .title{
+            position: relative;
             text-align: center;
-            font-size: 25px;
+            font-size: 16px;
+            color: #4B4444;
+            padding-top: 8px;
+            margin-bottom: 5px;
         }
         .subtitle{
             text-align: center;
+            font-size: 12px;
+            font-style: italic;
+            color: #665c5c;
+            margin-bottom: 5px;
         }
     `
 
+    const cardStyle = {
+        borderStyle: 'none',
+        paddingBottom: '30px'
+
+    }
+
     return (
         <Div>
-        <Card>
+        <Card style={cardStyle}>
             <CardImg top width="100%" src="/assets/product1.jpeg" alt="Card image cap" />
-            <CardBody>
+            {/* <CardBody> */}
             <CardTitle className="title">Just Hold On Blush Maxi</CardTitle>
             <CardSubtitle className="subtitle">RM 123</CardSubtitle>
-            <br></br>
-            <Button>Add to Cart</Button>
-            </CardBody>
+            {/* </CardBody> */}
         </Card>
         </Div>
     );

@@ -8,16 +8,21 @@ import CardLayout from '../components/CardLayout'
 
 const HomePage = () => {
     const Div = styled.div`
-        .container-item {
-            padding-top: 100px;
-        }
     `
+
+    const containerStyle = {
+        padding: '50px',
+        paddingTop: '50px'
+    }
 
     return (
         <Div>
             <Slideshow/>
-            <Container className="container-item" fluid={true}>
+            <Container className="container-item" fluid={true} style={containerStyle}>
                 <Row xs="2" sm="2" md="3" lg="3">
+                    <Col><CardLayout /></Col>
+                    <Col><CardLayout /></Col>
+                    <Col><CardLayout /></Col>
                     <Col><CardLayout /></Col>
                     <Col><CardLayout /></Col>
                     <Col><CardLayout /></Col>
